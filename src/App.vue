@@ -1,14 +1,21 @@
 <template>
   <div id="root" :style="{ 'min-height': rootHeight + 'px' }">
-    <header :style="{ 'max-height': headerHeight + 'px' }">
+    <header>
+      <!--:style="{ 'max-height': headerHeight + 'px' }"-->
       <div id="logo">
         <img alt="Yamusic logo" src="assets/logo.png" />
       </div>
       <nav>
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
+        <router-link to="/">Главная</router-link>
+        <a>Подкасты</a>
+        <a>Жанры</a>
+        <a>Радио</a>
+        <router-link to="/about">Жми сюда</router-link>
       </nav>
-      <div id="profile"></div>
+      <div id="profile">
+        <a>Моя коллекция</a>
+        <img alt="Profile logo" src="assets/profile.png" />
+      </div>
     </header>
     <main>
       <div class="centerblock-wrapper">
@@ -61,21 +68,31 @@ export default {
 header {
   display: flex;
   flex-direction: row;
+  max-height: 70px;
+  flex-wrap: nowrap;
 
   a {
-    font-weight: bold;
+    //font-weight: bold;
     color: #2c3e50;
-
+    margin: 0 2%;
     &.router-link-exact-active {
       color: #42b983;
     }
   }
 }
-#logo,
-nav {
+#logo {
   max-height: inherit;
   flex-grow: 2;
   flex-basis: 40%;
+  text-align: left;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  max-height: inherit;
+  flex-grow: 2;
+  flex-basis: 40%;
+  align-items: center;
 }
 img {
   max-height: inherit;
@@ -84,6 +101,9 @@ img {
   max-height: inherit;
   flex-grow: 1;
   flex-basis: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 main {
   display: flex;
