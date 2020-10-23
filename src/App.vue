@@ -6,7 +6,7 @@
         <img alt="Yamusic logo" src="assets/logo.png" />
       </div>
       <nav>
-        <router-link to="/">Главная</router-link>
+        <router-link to="/">Главное</router-link>
         <a>Подкасты</a>
         <a>Жанры</a>
         <a>Радио</a>
@@ -21,7 +21,7 @@
       <div class="centerblock-wrapper">
         <router-view />
       </div>
-      <div class="sidebar" :style="{ height: sidebarHeight + 'px' }"></div>
+      <div class="sidebar" :style="{ height: rootHeight - 135 + 'px' }"></div>
     </main>
   </div>
 </template>
@@ -31,15 +31,13 @@ export default {
   data() {
     return {
       rootHeight: 966,
-      headerHeight: 70,
-      sidebarHeight: 831
+      headerHeight: 70
     };
   },
   methods: {
     updateRootHeight() {
       this.rootHeight = window.innerHeight;
       //this.headerHeight = this.rootHeight * 0.072463768115942;
-      this.sidebarHeight = this.rootHeight - 113;
     }
   },
   created() {
@@ -70,6 +68,7 @@ header {
   flex-direction: row;
   max-height: 70px;
   flex-wrap: nowrap;
+  padding: 0 30px;
 
   a {
     //font-weight: bold;
@@ -93,6 +92,7 @@ nav {
   flex-grow: 2;
   flex-basis: 40%;
   align-items: center;
+  text-align: center;
 }
 img {
   max-height: inherit;
@@ -110,10 +110,9 @@ main {
   flex-direction: row;
 }
 .centerblock-wrapper {
-  background-color: #42b983;
-  display: flex;
-  flex-direction: column;
+  background-color: aliceblue;
   width: 66%;
+  padding: 30px 30px 60px 30px;
 }
 .sidebar {
   width: 33%;
