@@ -5,7 +5,7 @@
     <div class="slider">
       <div class="contentWrapper" v-for="id in contentId" :key="id">
         <h3>Заголовок</h3>
-        <img alt="Some cover" src="assets/cover.png" />
+        <img alt="Some cover" src="assets/images/cover.png" />
         <a>Описание</a>
       </div>
     </div>

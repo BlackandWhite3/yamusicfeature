@@ -32,16 +32,26 @@ export default {
     margin: 35px auto 25px 0;
   }
 }
-
+h1 {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: bold;
+}
 #home-nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   text-align: center;
   margin-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
   a {
     text-transform: uppercase;
     margin: 0 6% 0 0;
+    color: #777;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 29px;
   }
 }
 </style>

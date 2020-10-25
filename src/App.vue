@@ -3,12 +3,12 @@
     <header>
       <!--:style="{ 'max-height': headerHeight + 'px' }"-->
       <div id="logo">
-        <img alt="Yamusic logo" src="assets/logo.png" />
+        <img alt="Yamusic logo" src="assets/images/logo.png" />
       </div>
       <nav>
         <router-link to="/">Главное</router-link>
-        <a>Подкасты</a>
-        <a>Жанры</a>
+        <a href="#">Подкасты</a>
+        <a href="#">Жанры</a>
         <a>Радио</a>
         <router-link to="/about">Жми сюда</router-link>
       </nav>
@@ -48,14 +48,14 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  max-width: 76%;
+  max-width: 1440px;
   margin: 0 auto;
   background-color: white;
+  z-index: 0;
 }
 
 #root {
@@ -69,13 +69,20 @@ header {
   max-height: 70px;
   flex-wrap: nowrap;
   padding: 0 30px;
+  line-height: 70px;
+  border-bottom: 1px solid #e5e5e5;
+  font-weight: normal;
 
   a {
     //font-weight: bold;
-    color: #2c3e50;
+    display: inline-block;
+    color: #222;
     margin: 0 2%;
+    font-size: 15px;
     &.router-link-exact-active {
       color: #42b983;
+      border-bottom: 3px solid #f33;
+      max-height: 96%;
     }
   }
 }
@@ -86,12 +93,12 @@ header {
   text-align: left;
 }
 nav {
-  display: flex;
-  flex-direction: row;
+  //display: flex;
+  //flex-direction: row;
   max-height: inherit;
   flex-grow: 2;
   flex-basis: 40%;
-  align-items: center;
+  //align-items: center;
   text-align: center;
 }
 img {
@@ -108,11 +115,12 @@ img {
 main {
   display: flex;
   flex-direction: row;
+  z-index: 1;
 }
 .centerblock-wrapper {
-  background-color: aliceblue;
   width: 66%;
   padding: 30px 30px 60px 30px;
+  border-right: 1px solid #e5e5e5;
 }
 .sidebar {
   width: 33%;
@@ -124,6 +132,12 @@ html {
 body {
   height: 100%;
   overflow: visible !important;
+  font-family: Yandex Sans, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  letter-spacing: normal;
+  font-style: normal;
+  font-stretch: normal;
+  text-transform: none;
 }
 * {
   margin: 0;
