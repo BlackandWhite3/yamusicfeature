@@ -14,7 +14,7 @@
       </nav>
       <div id="profile">
         <a>Моя коллекция</a>
-        <img alt="Profile logo" src="assets/profile.png" />
+        <img alt="Profile logo" src="assets/images/profile.png" />
       </div>
     </header>
     <main>
@@ -142,5 +142,6 @@ body {
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 </style>
